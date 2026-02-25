@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Zohaib Ahmed Rahimoon</title>
+
+<link rel="icon" type="image/png" href="logo.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -27,7 +31,7 @@ color:white;
 overflow-x:hidden;
 }
 
-/* DIVINE LIGHT BACKGROUND */
+/* DIVINE LIGHT */
 
 .divine-light{
 position:fixed;
@@ -39,12 +43,8 @@ z-index:-1;
 }
 
 @keyframes divineMove{
-from{
-transform:translate(-400px,-400px);
-}
-to{
-transform:translate(600px,500px);
-}
+from{transform:translate(-400px,-400px);}
+to{transform:translate(600px,500px);}
 }
 
 /* NAVBAR */
@@ -64,11 +64,6 @@ nav a{
 color:#00f2ff;
 margin-left:30px;
 text-decoration:none;
-transition:0.3s;
-}
-
-nav a:hover{
-color:white;
 }
 
 /* HERO */
@@ -80,53 +75,46 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-opacity:0;
 animation:fadeIn 2s forwards;
+opacity:0;
 }
 
 @keyframes fadeIn{
 to{opacity:1;}
 }
 
-.profile-img{
-width:270px;
-height:270px;
+/* PROFILE LOGO */
+
+header img{
+width:90px;
+height:90px;
 border-radius:50%;
-object-fit:cover;
-border:6px solid #00f2ff;
-box-shadow:0 0 100px #00f2ff55;
+border:3px solid #00f2ff;
+box-shadow:0 0 40px #00f2ff55;
 }
 
 /* NAME */
 
 .name{
 font-size:3.8rem;
-margin-top:40px;
+margin-top:30px;
 color:#00f2ff;
 letter-spacing:3px;
 }
 
-/* TYPING */
+/* MOVING TEXT */
 
-.typing{
-margin-top:18px;
-font-size:1.2rem;
-border-right:3px solid #00f2ff;
-white-space:nowrap;
-overflow:hidden;
-animation:
-typing 4s steps(50,end),
-blink 0.8s infinite;
-width:0;
+.motion-text{
+display:inline-block;
+margin-top:15px;
+animation:slideMotion 6s ease-in-out infinite;
 }
 
-@keyframes typing{
-from{width:0}
-to{width:380px}
-}
-
-@keyframes blink{
-50%{border-color:transparent}
+@keyframes slideMotion{
+0%{transform:translateX(-80px);opacity:0}
+30%{transform:translateX(0);opacity:1}
+70%{transform:translateX(0);opacity:1}
+100%{transform:translateX(80px);opacity:0}
 }
 
 /* SECTIONS */
@@ -138,13 +126,13 @@ padding:120px 10%;
 /* TITLE */
 
 .section-title{
-font-size:2.4rem;
+font-size:2.3rem;
 border-left:7px solid #00f2ff;
 padding-left:20px;
 margin-bottom:55px;
 }
 
-/* GLASS CARD */
+/* CARD */
 
 .card{
 background:rgba(255,255,255,0.04);
@@ -167,26 +155,26 @@ background:#080808;
 padding:50px;
 border-radius:40px;
 text-align:center;
-transition:0.4s;
 border:1px solid rgba(0,242,255,0.3);
+transition:0.4s;
 }
 
 .edu-item:hover{
-transform:translateY(-15px);
-box-shadow:0 0 80px rgba(0,242,255,0.35);
+transform:translateY(-12px);
+box-shadow:0 0 60px rgba(0,242,255,0.35);
 }
 
 /* GALLERY */
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:45px;
 }
 
 .gallery img{
 width:100%;
-height:380px;
+height:360px;
 object-fit:contain;
 background:black;
 border-radius:40px;
@@ -195,7 +183,7 @@ transition:0.5s;
 
 .gallery img:hover{
 transform:scale(1.05);
-box-shadow:0 0 90px #00f2ff88;
+box-shadow:0 0 80px #00f2ff88;
 }
 
 /* SOCIAL */
@@ -225,13 +213,21 @@ text-decoration:none;
 font-weight:600;
 }
 
+/* EMAIL SECTION */
+
+.email-section{
+text-align:center;
+padding:40px;
+color:#00f2ff;
+font-size:1.1rem;
+}
+
 /* FOOTER */
 
 footer{
 text-align:center;
-padding:80px;
-background:black;
-margin-top:120px;
+padding:30px;
+font-size:0.9rem;
 }
 
 /* RESPONSIVE */
@@ -251,6 +247,7 @@ height:300px;
 }
 
 }
+
 </style>
 </head>
 
@@ -271,29 +268,32 @@ height:300px;
 
 <header>
 
-<img src="photo1.jpg" class="profile-img">
+<img src="logo.png">
 
 <div class="name">
 Zohaib Ahmed Rahimoon
 </div>
 
-<div class="typing">
+<div class="motion-text">
 Rooted in Umerkot | Ex-Cadet | ICS Student
 </div>
 
 </header>
 
 <section id="about">
+
 <h2 class="section-title">Introduction</h2>
 
 <div class="card">
-I completed my Matriculation from Cadet College Fateh Jang and gained valuable academic experience there. 
+I completed my Matriculation from Cadet College Fateh Jang and gained academic experience there. 
 Currently studying Intermediate in Computer Science (ICS) at Government Boys Degree College Umerkot. 
 Proudly rooted in Umerkot.
 </div>
+
 </section>
 
 <section id="education">
+
 <h2 class="section-title">Education</h2>
 
 <div class="edu-box">
@@ -312,6 +312,7 @@ Proudly rooted in Umerkot.
 </section>
 
 <section id="gallery">
+
 <h2 class="section-title">Gallery</h2>
 
 <div class="gallery">
@@ -321,28 +322,32 @@ Proudly rooted in Umerkot.
 
 </section>
 
+<section class="email-section">
+📧 zohaibahmedrahimoon@gmail.com
+</section>
+
 <section id="contact">
-<h2 class="section-title">Connect With Me</h2>
 
 <div class="social-grid">
 
 <div class="social-card">
-<a href="https://www.instagram.com/zohaibahmed.rahii/" target="_blank">Instagram</a>
+<a href="#">Instagram</a>
 </div>
 
 <div class="social-card">
-<a href="https://www.facebook.com/zohaibahmed.rahimoon/" target="_blank">Facebook</a>
+<a href="#">Facebook</a>
 </div>
 
 <div class="social-card">
-<a href="https://www.linkedin.com/in/zohaibahmedrahimoon/" target="_blank">LinkedIn</a>
+<a href="#">LinkedIn</a>
 </div>
 
 </div>
+
 </section>
 
 <footer>
-<p>📧 zohaibahmedrahimoon@gmail.com</p>
+@2026 Zohaib Ahmed Rahimoon
 </footer>
 
 </body>
