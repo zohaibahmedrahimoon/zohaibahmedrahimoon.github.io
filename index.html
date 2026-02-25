@@ -4,25 +4,63 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zohaib Ahmed Rahimoon</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
-body{
-background:#0f0f0f;
-color:white;
-line-height:1.6;
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
+body{
+background:#0b0b0f;
+color:white;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+width:100%;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(10px);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 10%;
+z-index:1000;
+}
+
+nav h2{
+color:#00f2ff;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00f2ff;
+}
+
+/* HERO */
+
 header{
-min-height:100vh;
+height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:linear-gradient(135deg,#000,#1c1c1c);
-padding:40px;
+padding-top:80px;
+background:radial-gradient(circle at center,#111 0%,#000 70%);
 }
 
 .profile-img{
@@ -30,14 +68,13 @@ width:220px;
 height:220px;
 border-radius:50%;
 object-fit:cover;
-border:5px solid #00e5ff;
-box-shadow:0 0 30px rgba(0,229,255,0.4);
+border:5px solid #00f2ff;
+box-shadow:0 0 40px rgba(0,242,255,0.6);
 margin-bottom:25px;
 }
 
-h1{
-font-size:2.8rem;
-font-weight:700;
+header h1{
+font-size:3rem;
 }
 
 .subtitle{
@@ -45,151 +82,233 @@ color:#aaa;
 margin-top:10px;
 }
 
+/* SECTION */
+
 section{
-padding:70px 10%;
+padding:100px 10%;
 }
 
 .section-title{
 font-size:2rem;
-margin-bottom:30px;
-border-left:5px solid #00e5ff;
-padding-left:12px;
+margin-bottom:40px;
+border-left:5px solid #00f2ff;
+padding-left:15px;
 }
+
+/* CARD */
 
 .card{
-background:#1a1a1a;
-padding:25px;
-border-radius:15px;
-margin-bottom:20px;
-transition:0.3s ease;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(12px);
+padding:30px;
+border-radius:20px;
+margin-bottom:25px;
+border:1px solid rgba(255,255,255,0.1);
 }
 
-.card:hover{
-transform:translateY(-6px);
-background:#222;
+/* EDUCATION */
+
+.edu-box{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
 }
+
+.edu-item{
+background:#111;
+padding:30px;
+border-radius:20px;
+text-align:center;
+transition:0.3s;
+border:1px solid rgba(0,242,255,0.2);
+}
+
+.edu-item:hover{
+transform:translateY(-8px);
+box-shadow:0 0 25px rgba(0,242,255,0.3);
+}
+
+/* GALLERY */
 
 .gallery{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-justify-content:center;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
 .gallery img{
-width:280px;
-border-radius:15px;
-box-shadow:0 0 20px rgba(0,229,255,0.3);
-transition:0.3s;
+width:100%;
+border-radius:20px;
+transition:0.4s;
+box-shadow:0 0 20px rgba(0,242,255,0.2);
 }
 
 .gallery img:hover{
 transform:scale(1.05);
+box-shadow:0 0 40px rgba(0,242,255,0.6);
 }
 
-.skills span{
-display:inline-block;
-background:#00e5ff;
-color:black;
-padding:8px 15px;
-border-radius:20px;
-margin:5px;
-font-weight:600;
+/* FEATURED IMAGE SECTION */
+
+.featured{
+display:flex;
+justify-content:center;
+align-items:center;
+margin-top:50px;
 }
+
+.featured img{
+width:350px;
+border-radius:25px;
+box-shadow:0 0 50px rgba(0,242,255,0.5);
+transition:0.4s;
+}
+
+.featured img:hover{
+transform:scale(1.07);
+}
+
+/* SOCIAL SECTION */
+
+.social-section{
+text-align:center;
+margin-top:50px;
+}
+
+.social-grid{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.social-card{
+background:#111;
+padding:20px 40px;
+border-radius:50px;
+transition:0.4s;
+border:1px solid rgba(0,242,255,0.3);
+}
+
+.social-card a{
+text-decoration:none;
+color:#00f2ff;
+font-weight:600;
+font-size:1.1rem;
+}
+
+.social-card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 30px rgba(0,242,255,0.6);
+}
+
+/* QUOTE */
 
 .quote{
 text-align:center;
+font-size:1.4rem;
 font-style:italic;
-font-size:1.3rem;
-color:#00e5ff;
+color:#00f2ff;
+margin-top:40px;
 }
+
+/* FOOTER */
 
 footer{
 background:#000;
+padding:40px;
 text-align:center;
-padding:30px;
-}
-
-footer a{
-color:#00e5ff;
-margin:0 12px;
-text-decoration:none;
-font-weight:600;
-}
-
-footer a:hover{
-text-decoration:underline;
+margin-top:60px;
 }
 
 @media(max-width:768px){
-.gallery{flex-direction:column;align-items:center;}
+.edu-box{
+grid-template-columns:1fr;
+}
+header h1{
+font-size:2.2rem;
+}
 }
 </style>
 </head>
 
 <body>
 
+<nav>
+<h2>Zohaib</h2>
+<div>
+<a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Connect</a>
+</div>
+</nav>
+
 <header>
-<img class="profile-img" src="photo1.jpg">
+<img src="photo1.jpg" class="profile-img">
 <h1>Zohaib Ahmed Rahimoon</h1>
 <div class="subtitle">Ex-Cadet | ICS Student</div>
 </header>
 
-<section>
+<section id="about">
 <h2 class="section-title">Introduction</h2>
 <div class="card">
-I completed my Matriculation from Cadet College and proudly carry the discipline and character of an ex-cadet. 
-Currently pursuing Intermediate in Computer Science (ICS) at Government Boys Degree College Umerkot, 
-my academic journey reflects structure, consistency, and personal development.
+I completed my Matriculation from Cadet College Fateh Jang and proudly carry the discipline and character of an ex-cadet. 
+Currently pursuing Intermediate in Computer Science (ICS) at Government Boys Degree College Umerkot.
 </div>
 </section>
 
-<section>
+<section id="education">
 <h2 class="section-title">Education</h2>
-
-<div class="card">
-<h3>Matriculation</h3>
-<p>Cadet College – Academic foundation built on discipline and leadership values.</p>
+<div class="edu-box">
+<div class="edu-item">
+<h3>Cadet College Fateh Jang</h3>
+<p>Matriculation</p>
 </div>
-
-<div class="card">
-<h3>Intermediate in Computer Science (ICS)</h3>
-<p>Government Boys Degree College Umerkot</p>
+<div class="edu-item">
+<h3>Government Boys Degree College Umerkot</h3>
+<p>Intermediate in Computer Science (ICS)</p>
+</div>
 </div>
 </section>
 
-<section>
+<section id="gallery">
 <h2 class="section-title">Gallery</h2>
 <div class="gallery">
+<img src="photo1.jpg">
 <img src="photo2.jpg">
 </div>
-</section>
 
-<section>
-<h2 class="section-title">Interests</h2>
-<div class="skills">
-<span>Book Reading</span>
-<span>Autobiographies</span>
-<span>Islamic History</span>
-<span>World History</span>
+<div class="featured">
+<img src="photo3.jpg">
 </div>
 </section>
 
-<section>
-<h2 class="section-title">Quote</h2>
+<section id="contact" class="social-section">
+<h2 class="section-title">Connect With Me</h2>
+
+<div class="social-grid">
+<div class="social-card">
+<a href="https://www.instagram.com/zohaibahmed.rahii/" target="_blank">Instagram</a>
+</div>
+<div class="social-card">
+<a href="https://www.facebook.com/ZohaibAhmedRahimoon/" target="_blank">Facebook</a>
+</div>
+<div class="social-card">
+<a href="https://www.linkedin.com/in/zohaibahmedrahimoon/" target="_blank">LinkedIn</a>
+</div>
+</div>
+
 <div class="quote">
 “I do not believe in taking the right decision, I take a decision and make it right.”  
 — Quaid-e-Azam
 </div>
+
 </section>
 
 <footer>
-<p>Connect with me</p>
-<a href="https://www.instagram.com/zohaibahmed.rahii/" target="_blank">Instagram</a>
-<a href="https://www.facebook.com/ZohaibAhmedRahimoon/" target="_blank">Facebook</a>
-<a href="https://www.linkedin.com/in/zohaibahmedrahimoon/" target="_blank">LinkedIn</a>
-<br><br>
-Email: zohaibahmedrahimoon@gmail.com
+<p>Email: zohaibahmedrahimoon@gmail.com</p>
 </footer>
 
 </body>
